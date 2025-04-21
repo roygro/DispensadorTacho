@@ -1,28 +1,109 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="24dp"
-    android:gravity="center">
+    android:background="#E6E6FA">
 
-    <Button
-        android:id="@+id/btnDosis"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Ver Dosis"
-        android:layout_marginBottom="16dp"/>
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center_horizontal">
 
-    <Button
-        android:id="@+id/btnHistorial"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Ver Historial"
-        android:layout_marginBottom="16dp"/>
+        <!-- BOTÓN VISUAL: DOSIS -->
+        <LinearLayout
+            android:id="@+id/btnDosis"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="24dp"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true">
 
-    <Button
-        android:id="@+id/btnMedicamentos"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Ver Medicamentos"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/dosis"
+                android:contentDescription="Imagen Dosis" />
 
-</LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ver Dosis"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:padding="8dp"
+                android:textStyle="bold"
+                android:textColor="#000" />
+        </LinearLayout>
+
+        <!-- BOTÓN VISUAL: HISTORIAL -->
+        <LinearLayout
+            android:id="@+id/btnHistorial"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="24dp"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/historial"
+                android:contentDescription="Imagen Historial" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ver Historial"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:padding="8dp"
+                android:textStyle="bold"
+                android:textColor="#000" />
+        </LinearLayout>
+
+        <!-- BOTÓN VISUAL: MEDICAMENTOS -->
+        <LinearLayout
+            android:id="@+id/btnMedicamentos"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/medicamento"
+                android:contentDescription="Imagen Medicamentos" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ver Medicamentos"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:padding="8dp"
+                android:textStyle="bold"
+                android:textColor="#000" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

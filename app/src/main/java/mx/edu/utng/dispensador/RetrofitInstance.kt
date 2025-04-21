@@ -11,7 +11,7 @@ object RetrofitInstance {
     //CAMBIAR IP SEGUN DONDE SE CONECTE (SE CAMBIA AQUI Y EN xml>network_security_config.xml
    // private const val BASE_URL = "http://192.168.1.87:3000/api/" //para el movil
    private const val BASE_URL = "http://10.0.2.2:3000/api/" //probar en el emulador
-    // private const val BASE_URL = "http://192.168.1.104:3000/api/" //para el movil House Andy
+     //private const val BASE_URL = "http://192.168.1.104:3000/api/" //para el movil House Andy
 
 
 

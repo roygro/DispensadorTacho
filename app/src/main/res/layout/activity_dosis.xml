@@ -3,8 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp"
-    android:background="@android:color/white">
+    android:background="#F2F2F2"
+    android:padding="16dp">
 
     <!-- Título de la actividad -->
     <TextView
@@ -12,23 +12,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Lista de Dosis"
-        android:textSize="18sp"
+        android:textSize="20sp"
         android:textStyle="bold"
+        android:textColor="#333"
+        android:paddingBottom="12dp"
+        android:gravity="center"/>
+
+    <!-- RecyclerView para mostrar dosis -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvDosis"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
         android:paddingBottom="8dp"/>
-
-    <!-- TextView para mostrar las dosis obtenidas -->
-    <TextView
-        android:id="@+id/tvDosis"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Cargando dosis..."
-        android:textSize="16sp"
-        android:padding="16dp"
-        android:textColor="@android:color/black"/>
-
-    <!-- Espaciado al final -->
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="16dp"/>
-
 </LinearLayout>
