@@ -1,28 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="24dp"
-    android:gravity="center">
+    android:gravity="center"
+    android:padding="24dp">
 
     <Button
         android:id="@+id/btnDosis"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Ver Dosis"
-        android:layout_marginBottom="16dp"/>
+        android:text="📋 Ver Dosis"
+        android:layout_marginBottom="16dp" />
 
     <Button
         android:id="@+id/btnHistorial"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Ver Historial"
-        android:layout_marginBottom="16dp"/>
+        android:text="🕓 Ver Historial"
+        android:layout_marginBottom="16dp" />
 
     <Button
         android:id="@+id/btnMedicamentos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Ver Medicamentos"/>
-
+        android:text="💊 Ver Medicamentos" />
 </LinearLayout>

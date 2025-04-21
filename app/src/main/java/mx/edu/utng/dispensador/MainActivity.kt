@@ -2,42 +2,33 @@ package mx.edu.utng.dispensador
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import android.widget.Button
-import android.widget.Toast
-
+import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var btnDosis: Button
+    private lateinit var btnHistorial: Button
+    private lateinit var btnMedicamentos: Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_main)  // Asegúrate de que tu layout tenga estos botones
 
+        btnDosis = findViewById(R.id.btnDosis)
+        btnHistorial = findViewById(R.id.btnHistorial)
+        btnMedicamentos = findViewById(R.id.btnMedicamentos)
 
-
-        val btnPaciente = findViewById<Button>(R.id.btnRegistrarPaciente)
-        val btnMedicamento = findViewById<Button>(R.id.btnRegistrarMedicamento)
-        val btnProgramar = findViewById<Button>(R.id.btnProgramarDispensacion)
-        val btnHistorial = findViewById<Button>(R.id.btnHistorial)
-
-        btnPaciente.setOnClickListener {
-            val intent = Intent(this, RegistrarPacienteActivity::class.java)
-            startActivity(intent)
-        }
-
-
-        btnMedicamento.setOnClickListener {
-            Toast.makeText(this, "Registrar Medicamento", Toast.LENGTH_SHORT).show()
-        }
-
-        btnProgramar.setOnClickListener {
-            Toast.makeText(this, "Programar Dispensación", Toast.LENGTH_SHORT).show()
+        btnDosis.setOnClickListener {
+            startActivity(Intent(this, DosisActivity::class.java))
         }
 
         btnHistorial.setOnClickListener {
-            Toast.makeText(this, "Historial", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this, HistorialActivity::class.java))
+        }
+
+        btnMedicamentos.setOnClickListener {
+            startActivity(Intent(this, MedicamentosActivity::class.java))
         }
     }
 }
